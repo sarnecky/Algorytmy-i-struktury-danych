@@ -1,0 +1,45 @@
+//double droga(punkt tab[], int ilwiosek)
+//{
+//	//wykonujemy tyle skokow co wiosek
+//	//w kazdej iteracji przechodzimy do kolejnej wioski, do ktorej mamy najblizej, i ta wioska staje sie nasza 1
+//	//zwiekszamy droge S
+//	//potem od nowej wioski idziemy do kolejnej, do ktorej mamy najblizej
+//
+//	int j, ind = 0, ind_temp = 0, skoki = 0, ileodwiedzonych = 0;
+//	double droga = 0, S = 0, min = 0;
+//	int *wioski_odwiedzone = new int[ilwiosek - 1];
+//
+//	while (skoki<ilwiosek - 1)
+//	{
+//		min = 0;
+//		for (j = ilwiosek - 1; j >0; j--)
+//		{
+//			if (odwiedzona(wioski_odwiedzone, j, ileodwiedzonych))
+//			{
+//				droga = odl(tab[ind].x, tab[ind].y, tab[j].x, tab[j].y);
+//				if (min == 0)
+//				{
+//					min = droga;
+//					ind_temp = j;
+//				}
+//				if (min>droga)
+//				{
+//					min = droga;
+//					ind_temp = j;
+//				}
+//			}
+//
+//		}
+//		ind = ind_temp;
+//		wioski_odwiedzone[skoki] = ind;
+//		ileodwiedzonych++;
+//		cout << ind + 1 << " " << S << " + " << min << " = " << S + min << endl;
+//		S = S + min; // powiekszam S o droge do najblizszej wioski
+//		skoki++;
+//	}
+//	cout << ind + 1 << " " << S << " + " << odl(tab[0].x, tab[0].y, tab[ind].x, tab[ind].y) << " = " << S + odl(tab[0].x, tab[0].y, tab[ind].x, tab[ind].y) << endl;
+//	S = S + odl(tab[0].x, tab[0].y, tab[ind].x, tab[ind].y);
+//	return floor(S);
+//	delete[] wioski_odwiedzone;
+//
+//}
